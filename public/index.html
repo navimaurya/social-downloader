@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Reel Downloader</title>
+    <script src="/static/tailwindcss.js"></script>
+</head>
+<body class="bg-gradient-to-b from-purple-100 to-blue-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg py-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-purple-600">social.io</h1>
+            <nav class="flex space-x-6">
+                <!-- <a href="#" class="text-gray-700 hover:text-purple-600">Home</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600">Language</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600">Chrome Extension</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600">About</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-16">
+        <h2 class="text-4xl font-extrabold text-purple-700">Paste Instagram URL here! 🐱</h2>
+        <p class="text-gray-600 mt-4">Paste the URL of an Instagram video, reel, photo, or IGTV link to download.</p>
+
+        <!-- Input Form -->
+        <div class="mt-8 mx-auto max-w-xl">
+            <form id="reelForm" onsubmit="" class="flex items-center bg-white rounded-lg shadow-lg">
+                <input 
+                    type="url" 
+                    id="url" 
+                    name="url" 
+                    class="w-full px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    placeholder="Paste link here!" 
+                    required>
+                <button 
+                    type="submit" 
+                    class="bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-r-lg">
+                    Fetch Video
+                </button>
+            </form>
+           
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <!-- <section class="py-16 bg-white">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/64" alt="Easy Peasy" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Easy Peasy</h3>
+                <p class="text-gray-600">See how easy it is to download Instagram reels quickly.</p>
+            </div>
+            <div class="text-center">
+                <img src="https://via.placeholder.com/64" alt="Super Fast" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Super Fast</h3>
+                <p class="text-gray-600">Experience the fastest way to download reels.</p>
+            </div>
+            <div class="text-center">
+                <img src="https://via.placeholder.com/64" alt="Well Secure" class="mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Well Secure</h3>
+                <p class="text-gray-600">Your downloads are safe and secure with us.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="resultSection" class="py-16 hidden">
+        <div class="container mx-auto max-w-xl bg-white shadow-lg rounded-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Reel Details</h2>
+
+            <!-- Video with Poster and Download Button -->
+            <video id="video" class="w-full rounded-md mb-4" controls poster="" style="display: none;">
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Download Button -->
+            <a target="_blank" id="downloadButton" href="#" download class="hidden bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md text-center block w-full">
+                Download Video
+            </at>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="/static/script.js" ></script>
+</body>
+</html>
